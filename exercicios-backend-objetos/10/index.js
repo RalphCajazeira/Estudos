@@ -25,9 +25,9 @@ const monitor = { nome: "Monitor LG 29 FHD", valorEmCentavos: 129900 };
 
 // Adicione uma tv, dois cabos usb e uma webcam para o José
 
-const adicionarProduto = (cliente, produto, quantidade) => {
+const adicionarProduto = (cliente, item, quantidade) => {
   const produtoFormatado = {
-    produto,
+    item,
     quantidade,
   };
   cliente.carrinho.push(produtoFormatado);

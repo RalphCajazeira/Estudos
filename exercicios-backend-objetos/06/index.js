@@ -21,17 +21,32 @@ const usuarios = [
   },
 ];
 
-const jovens = [];
+// const jovens = [];
 
+// const adultos = [];
+
+// for (const usuario of usuarios) {
+//   if (usuario.idade > 17) {
+//     adultos.push(usuario);
+//   } else {
+//     jovens.push(usuario);
+//   }
+// }
+
+const jovens = [];
+let indiceJovens = 0;
 const adultos = [];
+let indiceAdulto = 0;
 
 for (const usuario of usuarios) {
-  if (usuario.idade > 17) {
-    adultos.push(usuario);
+  if (usuario.idade < 18) {
+    jovens[indiceJovens] = usuario;
+    indiceJovens++;
   } else {
-    jovens.push(usuario);
+    adultos[indiceAdulto] = usuario;
+    indiceAdulto++;
   }
 }
 
-console.log(adultos);
 console.log(jovens);
+console.log(adultos);

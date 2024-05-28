@@ -25,18 +25,19 @@ const usuarios = [
   },
 ];
 
-const donoDoPet = "Carlos";
+const donoDoPet = "Beatriz";
 let usuarioNaoEncontrado = true;
 
 for (const usuario of usuarios) {
-  if (usuario.nome === donoDoPet) {
+  const { nome, pets } = usuario;
+  if (nome === donoDoPet) {
     usuarioNaoEncontrado = false;
-    if (usuario.pets.length > 1) {
-      console.log(`Sou ${usuario.nome} e tenho ${usuario.pets.length} pets`);
-    } else if (usuario.pets.length === 1) {
-      console.log(`Sou ${usuario.nome} e tenho 1 pet`);
+    if (pets.length > 1) {
+      console.log(`Sou ${nome} e tenho ${pets.length} pets`);
+    } else if (pets.length === 1) {
+      console.log(`Sou ${nome} e tenho 1 pet`);
     } else {
-      console.log(`Sou ${usuario.nome} e não tenho pets`);
+      console.log(`Sou ${nome} e não tenho pets`);
     }
     break;
   }

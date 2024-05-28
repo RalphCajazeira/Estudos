@@ -31,8 +31,18 @@ const livro = {
   ],
 };
 
+// for (let i = 0; i < livro.capitulos.length; i++) {
+//   livro.capitulos[i] = {
+//     numero: i + 1,
+//     nome: livro.capitulos[i].nome,
+//   };
+// }
+
 for (let i = 0; i < livro.capitulos.length; i++) {
-  livro.capitulos[i].numero = i + 1;
+  livro.capitulos[i] = {
+    numero: i + 1,
+    ...livro.capitulos[i],
+  };
 }
 
 // let contador = 1;

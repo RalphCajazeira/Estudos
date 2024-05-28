@@ -22,10 +22,9 @@ const participantes = [
 const encontrarParticipante = "João";
 
 for (let i = 0; i < participantes.length; i++) {
-  const participante = participantes[i];
-  if (participante.nome === encontrarParticipante) {
+  if (participantes[i].nome === encontrarParticipante) {
     console.log(
-      `Galera... O ${participante.nome} está na posição ${i}, corre lá!`
+      `Galera... O ${participantes[i].nome} está na posição ${i}, corre lá!`
     );
   }
 }
